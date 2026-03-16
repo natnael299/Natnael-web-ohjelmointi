@@ -129,6 +129,11 @@ const projektit = [
     link: "https://taikukkula.fi/tiev25p/Natnael/kaavakanta/",
     name: "Kaavakanta",
     desc: "ohjelma, Jonka tarkoitus oli helpotta yhden aluen asukkaiden ja aluen halituksen komunikattio. Tehty käyttämällä php, mysql, js ja css"
+  },
+  {
+    link: "https://github.com/natnael299/frontend_projects",
+    name: "Frontend-projects",
+    desc: "10+ frontend projecteja joka sisältää github-finder, recipe-finder, advanced todo jne.., käytin js, css & html toteutamaan tämmösiä projekteja."
   }
 ];
 
