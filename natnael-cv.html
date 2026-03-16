@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Natnael-CV</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    header {
+      display: flex;
+      justify-content: center;
+      padding: 10px 20px;
+      gap: 70px;
+      align-items: center;
+    }
+
+    header .main {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .main h2 {
+      color: rgb(21, 140, 100);
+    }
+
+    header img {
+      border-radius: 50%;
+      height: 100px;
+    }
+
+    .tiedot {
+      display: grid;
+      width: 100%;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      row-gap: 10px;
+      column-gap: 2px;
+      padding: 10px 10px 15px 10px;
+      border-bottom: 5px solid rgb(21, 140, 100);
+    }
+
+    .osaaminenC,
+    .profile,
+    .kokemus,
+    .koulutus,
+    .projektit {
+      display: flex;
+      flex-direction: column;
+      padding: 10px 10px 19px 10px;
+      border-bottom: 5px solid rgb(21, 140, 100);
+    }
+
+    .kokemus div,
+    .koulutus div,
+    .projektit div,
+    .kielet {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .projektit {
+      gap: 25px;
+    }
+
+    .koulutus div {
+      gap: 5px;
+      margin-bottom: 15px;
+    }
+
+    .osaaminenC h2,
+    .profile h2,
+    .kokemus h2,
+    .koulutus h2,
+    .projektit h2,
+    .kielet h2 {
+      margin: 10px auto;
+      padding: 10px 0;
+      color: rgb(21, 140, 100);
+    }
+
+    .profile p {
+      max-width: 900px;
+      margin: 0 auto;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+
+    .osaaminen {
+      display: grid;
+      width: 100%;
+      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+      column-gap: 5px;
+      row-gap: 15px;
+      margin-left: 30px;
+
+    }
+
+    .osaaminen div p {
+      width: fit-content;
+      border-radius: 10px;
+      border: 1px solid black;
+      padding: 10px 15px;
+      background-color: #252525;
+      color: #fff;
+    }
+
+    .kielet {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      margin: 0 auto;
+      padding-bottom: 50px;
+      gap: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="main">
+      <h1>Natnael Beyene</h1>
+      <h2>Ohjelmistokehittaja</h2>
+    </div>
+    <img src="./image.png" alt="profile">
+  </header>
+
+  <div class="tiedot">
+    <div class="email">
+      <i class="fa-solid fa-envelope"></i>
+      natibeyene49@gmail.com
+    </div>
+    <div class="phone">
+      <i class="fa-solid fa-phone"></i>
+      +35845263755
+    </div>
+    <div class="location">
+      <i class="fa-solid fa-location-dot"></i>
+      Turku, suomi
+    </div>
+    <div class="linkedin">
+      <i class="fa-brands fa-linkedin"></i>
+      linkedin.com/in/natnael-beyene-b253413a4
+    </div>
+  </div>
+
+  <div class="profile">
+    <h2>Profiili</h2>
+    <p>Olen ohjelmistokehittaja, jolla on kokemusta seka frontend- etta backend-kehityksesta. Frontendissa osaan
+      HTML, CSS, JavaScript, TypeScript ja React. Backendissa minulla on kokemusta Pythonista, PHP:sta, Node.js:sta,
+      Express.js:sta seka hieman FastAPI:sta.</p>
+  </div>
+  <div class="osaaminenC">
+    <h2>Tekininen Osaaminen</h2>
+    <div class="osaaminen">
+    </div>
+  </div>
+  <div class="kokemus">
+    <h2>Työ kokemus</h2>
+  </div>
+  <div class="koulutus">
+    <h2>koulutus</h2>
+  </div>
+  <div class="projektit">
+    <h2>Projektit</h2>
+  </div>
+  <div class="kielet">
+    <h2>Kielet</h2>
+  </div>
+</body>
+
+<script>
+  //oma osaamistoja
+  const osaaminenEle = document.querySelector(".osaaminen")
+  const skills = [
+    "Frontend: HTML, CSS, JavaScript, TypeScript, React",
+    "Backend: Node.js, Express.js, FastAPI (perusteet)",
+    "Ohjelmointikielet: Python, PHP, JavaScript, TypeScript",
+    "Kokemusta seka frontend- etta backend-kehityksesta",
+    "REST API -kehitys",
+    "Nopea oppimaan"
+  ];
+  skills.forEach((skill) => {
+    const ele = document.createElement("div");
+    ele.innerHTML = `<p>${skill}</p>`;
+    osaaminenEle.appendChild(ele);
+  })
+
+  //oma työkokemus
+  const kokemusEle = document.querySelector(".kokemus")
+  const tyokokemus = [
+    {
+      title: "Ohjelmistokehittaja",
+      place: "Frontend- ja backend-projektit",
+      description: "Rakennan verkkosovelluksia frontendissa (HTML, CSS, JavaScript, TypeScript, React) ja backendissa (Node.js, Express.js, hieman FastAPI).",
+      date: "Nykyinen"
+    }
+  ];
+
+  tyokokemus.forEach((kokemus) => {
+    //container
+    const container = document.createElement("div");
+    //header
+    const header = document.createElement("div");
+    container.appendChild(header)
+    //header elements
+    const h3 = document.createElement("h3");
+    h3.textContent = kokemus.title
+    const p1 = document.createElement("p");
+    p1.innerHTML = `&rightarrow; ${kokemus.date}`
+    header.appendChild(h3)
+    header.appendChild(p1)
+    //body elements
+    const p2 = document.createElement("p");
+    p2.innerHTML = `&rightarrow; ${kokemus.place}`
+    const p3 = document.createElement("p");
+    p3.innerHTML = `&rightarrow; ${kokemus.description}`
+    container.appendChild(p2)
+    container.appendChild(p3)
+    kokemusEle.appendChild(container);
+  })
+
+  // oma koulutus
+  const koulutus = [
+    {
+      title: "Suomen kielen koulutus",
+      description: "Vuoden mittainen suomen kielen koulutus, jossa kehitettiin suullista ja kirjallista kielitaitoa työelämää varten. Saavutin koulutuksen päätteeksi B1-tason.",
+      school: "Turun ammatti-instituutti",
+      date: "joulu 2024"
+    },
+    {
+      title: "Tuva-koulutus",
+      description: "Suoritin TUVA-koulutuksen puolen vuoden aikana ja saavutin B2-tason suomen kielessä. Siirryin koulutuksesta suoraan ammattikouluun opiskelemaan ohjelmointia.",
+      school: "Turun ammatti-instituutti",
+      date: "kesä 2025"
+    },
+    {
+      title: "Tieto- ja viestintätekniikan perustutkinto",
+      description: "Opiskelen ICT-alan perustutkintoa, suuntautuminen ohjelmointi. Olen edustanut koulua Taitaja-kilpailussa.",
+      school: "Turun ammatti-instituutti",
+      date: "Nykyinen"
+    }
+  ];
+
+  const koulutusEle = document.querySelector(".koulutus");
+
+  koulutus.forEach((opinto) => {
+    const container = document.createElement("div");
+    const header = document.createElement("div");
+    container.appendChild(header);
+
+    const h3 = document.createElement("h3");
+    h3.textContent = opinto.title;
+    const pDate = document.createElement("li");
+    pDate.innerHTML = `&rightarrow; ${opinto.date}`;
+    header.appendChild(h3);
+
+    const pSchool = document.createElement("li");
+    pSchool.innerHTML = `&rightarrow; ${opinto.school}`;
+    const pDescription = document.createElement("li");
+    pDescription.innerHTML = `&rightarrow; ${opinto.description}`;
+    container.appendChild(pDate);
+    container.appendChild(pSchool);
+    container.appendChild(pDescription);
+    koulutusEle.appendChild(container);
+  });
+
+  // oma kielet
+  // Jokainen olio kuvaa yhden kielen ja kielitason.
+  const kielet = [
+    {
+      language: "Amhara",
+      level: "Äidinkieli"
+    },
+    {
+      language: "Suomi",
+      level: "Erinomainen"
+    },
+    {
+      language: "Englanti",
+      level: "Erinomainen"
+    }
+  ];
+
+  const kieletEle = document.querySelector(".kielet");
+
+  // Muodostetaan kielistä yksinkertainen lista: kieli - taso.
+  kielet.forEach((kieli) => {
+    const p = document.createElement("p");
+    p.innerHTML = `<li><strong>${kieli.language}</strong> - ${kieli.level}</li>`;
+    kieletEle.appendChild(p);
+  });
+
+  const projektit = [
+    {
+      link: "https://taikukkula.fi/tiev25p/Natnael/Tietovisa/",
+      name: "Tietovisa",
+      desc: "Peli-ohjelma, jossa opiskelijat voivat testata osammista valitsemalla opinto-aine, opettaja ja kysymyksen määrä. Tehty käyttämällä php, mysql, js ja css"
+    },
+    {
+      link: "https://taikukkula.fi/tiev25p/Natnael/kaavakanta/",
+      name: "Kaavakanta",
+      desc: "ohjelma, Jonka tarkoitus oli helpotta yhden aluen asukkaiden ja aluen halituksen komunikattio. Tehty käyttämällä php, mysql, js ja css"
+    }
+  ];
+
+  const projektitEle = document.querySelector(".projektit");
+
+  projektit.forEach((projekti) => {
+    const container = document.createElement("div");
+
+    const h3 = document.createElement("h3");
+    h3.textContent = projekti.name;
+
+    const link = document.createElement("div");
+    link.innerHTML = `<a href="${projekti.link}">${projekti.name}</a>`;
+
+    const desc = document.createElement("p");
+    desc.innerHTML = `&rightarrow; ${projekti.desc}`;
+
+    container.appendChild(h3);
+    container.appendChild(link);
+    container.appendChild(desc);
+    projektitEle.appendChild(container);
+  });
+</script>
+
+</html>
