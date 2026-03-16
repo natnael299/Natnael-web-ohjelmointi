@@ -1,0 +1,122 @@
+ * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ }
+
+ body {
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   height: 100vh;
+   font-family: Arial, Helvetica, sans-serif;
+ }
+
+ header {
+   display: flex;
+   justify-content: center;
+   padding: 10px 20px;
+   gap: 70px;
+   align-items: center;
+ }
+
+ header .main {
+   display: flex;
+   flex-direction: column;
+   gap: 6px;
+ }
+
+ .main h2 {
+   color: rgb(21, 140, 100);
+ }
+
+ header img {
+   border-radius: 50%;
+   height: 100px;
+ }
+
+ .tiedot {
+   display: grid;
+   width: 100%;
+   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+   row-gap: 10px;
+   column-gap: 2px;
+   padding: 10px 10px 15px 10px;
+   border-bottom: 5px solid rgb(21, 140, 100);
+ }
+
+ .osaaminenC,
+ .profile,
+ .kokemus,
+ .koulutus,
+ .projektit {
+   display: flex;
+   flex-direction: column;
+   padding: 10px 10px 19px 10px;
+   border-bottom: 5px solid rgb(21, 140, 100);
+ }
+
+ .kokemus div,
+ .koulutus div,
+ .projektit div,
+ .kielet {
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+ }
+
+ .projektit {
+   gap: 25px;
+ }
+
+ .koulutus div {
+   gap: 5px;
+   margin-bottom: 15px;
+ }
+
+ .osaaminenC h2,
+ .profile h2,
+ .kokemus h2,
+ .koulutus h2,
+ .projektit h2,
+ .kielet h2 {
+   margin: 10px auto;
+   padding: 10px 0;
+   color: rgb(21, 140, 100);
+ }
+
+ .profile p {
+   max-width: 900px;
+   margin: 0 auto;
+   line-height: 1.6;
+   text-align: center;
+ }
+
+
+ .osaaminen {
+   display: grid;
+   width: 100%;
+   grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+   column-gap: 5px;
+   row-gap: 15px;
+   margin-left: 30px;
+
+ }
+
+ .osaaminen div p {
+   width: fit-content;
+   border-radius: 10px;
+   border: 1px solid black;
+   padding: 10px 15px;
+   background-color: #252525;
+   color: #fff;
+ }
+
+ .kielet {
+   display: flex;
+   flex-direction: column;
+   align-items: start;
+   margin: 0 auto;
+   padding-bottom: 50px;
+   gap: 10px;
+ }
