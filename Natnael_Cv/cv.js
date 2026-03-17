@@ -79,13 +79,13 @@ koulutus.forEach((opinto) => {
 
   const h3 = document.createElement("h3");
   h3.textContent = opinto.title;
-  const pDate = document.createElement("li");
+  const pDate = document.createElement("p");
   pDate.innerHTML = `&rightarrow; ${opinto.date}`;
   header.appendChild(h3);
 
-  const pSchool = document.createElement("li");
+  const pSchool = document.createElement("p");
   pSchool.innerHTML = `&rightarrow; ${opinto.school}`;
-  const pDescription = document.createElement("li");
+  const pDescription = document.createElement("p");
   pDescription.innerHTML = `&rightarrow; ${opinto.description}`;
   container.appendChild(pDate);
   container.appendChild(pSchool);
@@ -146,7 +146,11 @@ projektit.forEach((projekti) => {
   h3.textContent = projekti.name;
 
   const link = document.createElement("div");
-  link.innerHTML = `<a href="${projekti.link}">${projekti.name}</a>`;
+  link.innerHTML = `
+  <p>
+     Nettisivun linki &rightarrow; 
+    <a href="${projekti.link}">${projekti.name}</a>
+  </p>`;
 
   const desc = document.createElement("p");
   desc.innerHTML = `&rightarrow; ${projekti.desc}`;

@@ -120,3 +120,20 @@
    padding-bottom: 50px;
    gap: 10px;
  }
+
+ @media (max-width: 450px) {
+   .osaaminen {
+     display: flex;
+     width: 100%;
+     flex-direction: column;
+     align-items: center;
+     margin: 0 auto;
+   }
+
+   .osaaminen div p {
+     font-size: 0.89rem;
+     text-align: center;
+     padding: 10px;
+     margin: 0 auto;
+   }
+ }
