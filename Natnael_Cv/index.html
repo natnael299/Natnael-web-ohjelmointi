@@ -7,7 +7,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
     integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="cv.css">
+
+  <link rel="stylesheet" href="style/general.css">
+  <link rel="stylesheet" href="style/cv.css">
   <title>Natnael-CV</title>
 
 </head>
@@ -18,9 +20,20 @@
       <h1>Natnael Beyene</h1>
       <h2>ohjelmistokehittäjä</h2>
     </div>
-    <img src="./image.png" alt="profile">
+    <img src="img/image.png" alt="profile">
   </header>
 
+  <nav>
+    <button class="current">
+      <i class="fa-solid fa-user"></i>
+      <p>Profile</p>
+    </button>
+
+    <button class="kokemukset" onclick="window.location.href='./kokemukset.html'">
+      <i class="fa-solid fa-address-card"></i>
+      <p>kokemukset</p>
+    </button>
+  </nav>
   <div class="tiedot">
     <div class="email">
       <i class="fa-solid fa-envelope"></i>
@@ -50,24 +63,25 @@
       HTML, CSS, JavaScript, TypeScript ja React. Backendissa minulla on kokemusta Pythonista, PHP:sta, Node.js:sta,
       Express.js:sta seka hieman FastAPI:sta.</p>
   </div>
+
   <div class="osaaminenC">
     <h2>Tekininen Osaaminen</h2>
     <div class="osaaminen">
     </div>
   </div>
-  <div class="kokemus">
-    <h2>Työ kokemus</h2>
-  </div>
+
   <div class="koulutus">
     <h2>koulutus</h2>
   </div>
+
   <div class="projektit">
     <h2>Projektit</h2>
   </div>
+
   <div class="kielet">
     <h2>Kielet</h2>
   </div>
-  <script src="./cv.js"></script>
+  <script src="./script/cv.js"></script>
 </body>
 
 </html>
