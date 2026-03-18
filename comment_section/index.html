@@ -75,20 +75,21 @@
 </head>
 
 <body>
-  <form action="#" method="post" onsubmit="submitComment">
+  <form method="GET" action="./index.html" class="form">
     <input type="date" name="date" required>
     <input type="email" name="email" placeholder="example@fake.com" required>
-    <select name="type" class="message" required>
+    <select name="type" class="type" required>
       <option value="">--valitse tyyppi--</option>
     </select>
-    <textarea name="" id="" required></textarea>
+    <textarea name="text" required></textarea>
     <div class="check">
-      <input type="checkbox" name="agree">
+      <input type="checkbox" name="agree" id="check">
       <p>Suostuun kaikkieen säntöjeen</p>
     </div>
     <input type="submit" value="lähettää">
     <a href="comments.html" style="margin: 0 auto;
     ">Tatkastelee commentoja</a>
+    <p id="error"></p>
   </form>
 
   <script type="module" src="./index.js"></script>

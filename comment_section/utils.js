@@ -1,4 +1,4 @@
-export const comments = [
+export const comments = JSON.parse(localStorage.getItem("comment")) || [
   {
     date: "2026-03-10",
     email: "anna@example.com",
@@ -42,3 +42,9 @@ export const comments = [
     text: "Lomake oli helppo tayttaa.",
   },
 ];
+
+//käytetään localstorage tallentamaan kommentoja pysyvasti
+getComments();
+export function getComments() {
+  localStorage.setItem("comment", JSON.stringify(comments));
+}
