@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 24px;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f6f8;
+      color: #1f2937;
+    }
+
+    form {
+      max-width: 520px;
+      margin: 24px auto;
+      padding: 20px;
+      background: #ffffff;
+      border: 1px solid #d1d5db;
+      border-radius: 10px;
+      display: grid;
+      gap: 12px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      box-sizing: border-box;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      padding: 10px 12px;
+      font: inherit;
+      background: #fff;
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .check {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .check input[type="checkbox"] {
+      width: auto;
+      margin: 0;
+    }
+
+    .check p {
+      margin: 0;
+      font-size: 0.95rem;
+    }
+
+    input[type="submit"] {
+      border: none;
+      background: #0f766e;
+      color: #ffffff;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    input[type="submit"]:hover {
+      background: #0b5f59;
+    }
+  </style>
+</head>
+
+<body>
+  <form action="#" method="post" onsubmit="submitComment">
+    <input type="date" name="date" required>
+    <input type="email" name="email" placeholder="example@fake.com" required>
+    <select name="type" class="message" required>
+      <option value="">--valitse tyyppi--</option>
+    </select>
+    <textarea name="" id="" required></textarea>
+    <div class="check">
+      <input type="checkbox" name="agree">
+      <p>Suostuun kaikkieen säntöjeen</p>
+    </div>
+    <input type="submit" value="lähettää">
+    <a href="comments.html" style="margin: 0 auto;
+    ">Tatkastelee commentoja</a>
+  </form>
+
+  <script type="module" src="./index.js"></script>
+</body>
+
+</html>

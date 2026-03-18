@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kommentit</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f6f8;
+      color: #1f2937;
+    }
+
+    h2 {
+      color: red;
+      margin: 20px auto;
+    }
+
+    .comments {
+      max-width: 600px;
+      margin: 0 auto;
+      display: grid;
+      gap: 12px;
+    }
+
+    .comment {
+      background: #ffffff;
+      border: 1px solid #d1d5db;
+      border-radius: 10px;
+      padding: 16px 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .text {
+      font-size: 0.97rem;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Kommentit</h2>
+  <div class="comments">
+    <!-- varastioda kaikki kommentit -->
+  </div>
+  <a href="index.html" style="margin: 0 auto;
+    ">Etusivuun</a>
+  <script type="module" src="./comments.js"></script>
+</body>
+
+</html>
