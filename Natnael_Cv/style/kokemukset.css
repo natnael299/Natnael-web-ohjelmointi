@@ -38,3 +38,21 @@
 .kokemukset div.kokemus p {
   max-width: 350px;
 }
+
+@media (max-width: 450px) {
+  .kokemukset {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .kokemukset div.kokemus {
+    padding: 5px;
+  }
+
+  .kokemukset div.kokemus p {
+    font-size: 0.9rem;
+    max-width: 350px;
+  }
+}
