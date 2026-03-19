@@ -18,24 +18,69 @@
       width: 100%;
       height: 100vh;
       font-family: Arial, Helvetica, sans-serif;
+      background: #f4f6f8;
     }
 
     h1 {
       margin: 20px auto;
+    }
+
+    h3 {
+      color: green;
+      margin: 0 0 15px 15px;
+    }
+
+    nav {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      max-width: 1200px;
+      justify-items: center;
+      row-gap: 15px;
+      padding-bottom: 40px;
+    }
+
+    img {
+      height: 300px;
+    }
+
+    a {
+      display: flex;
+      border-radius: 10px;
+      border: 1px solid black;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      padding-bottom: 10px;
+      width: 350px;
+    }
+
+    a:hover {
+      box-shadow: 0px 0px 8px green;
     }
   </style>
 </head>
 
 <body>
   <!-- pohja tiedosto -->
-  <header>
-
-  </header>
   <h1>Natnaelin Sivu</h1>
+  <h3>sivut</h3>
   <nav>
-    <a href="./comment_section/index.html">Keskustelu</a>
-    <a href="./Natnael_Cv/index.html">Työkokemus</a>
-    <a href="/">Porfolio</a>
+    <a href="./portfolio/comments/index.html">
+      <img src="./img/keskustelu.png" />
+      Keskustelu
+    </a>
+    <a href="./Natnael_Cv/index.html">
+      <img src="./img/cv.png" />
+      cv
+    </a>
+    <a href="./portfolio/portfoliosivu.html">
+      <img src="./img/Portfolio-amico.png" />
+      portfolio
+    </a>
+    <a href="./Natnael_Cv/kokemukset.html">
+      <img src="./img/Portfolio-amico.png" />
+      kokemus
+    </a>
   </nav>
 </body>
 

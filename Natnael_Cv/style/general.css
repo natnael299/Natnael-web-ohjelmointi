@@ -55,3 +55,18 @@
  .current {
    box-shadow: 0px 0px 4px greenyellow;
  }
+
+ footer {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 10px;
+   background-color: green;
+   color: white;
+   font-weight: bold;
+ }
+
+ footer a {
+   color: white;
+   font-weight: bold;
+ }

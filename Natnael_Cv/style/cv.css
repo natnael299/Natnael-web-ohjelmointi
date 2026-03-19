@@ -119,6 +119,8 @@
    gap: 10px;
  }
 
+
+
  @media (max-width: 450px) {
    .osaaminen {
      display: flex;
