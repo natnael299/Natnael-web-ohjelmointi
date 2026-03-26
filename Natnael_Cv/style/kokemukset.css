@@ -39,6 +39,49 @@
   max-width: 350px;
 }
 
+.show-details {
+  margin-top: 8px;
+  border: 1px solid #2f855a;
+  background: #2f855a;
+  color: #fff;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.show-details:hover {
+  background: #276749;
+}
+
+dialog {
+  margin: auto;
+  border: none;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.45);
+}
+
+dialog h4 {
+  margin-bottom: 12px;
+}
+
+dialog ul {
+  margin: 8px 0 12px 20px;
+}
+
+.close-details {
+  border: 1px solid #1f2937;
+  background: #1f2937;
+  color: #fff;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
 @media (max-width: 450px) {
   .kokemukset {
     display: flex;

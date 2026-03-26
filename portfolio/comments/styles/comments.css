@@ -39,12 +39,3 @@
       padding: 0 10px;
       margin-top: 15px;
     }
-
-    dialog {
-      margin: auto;
-    }
-
-    dialog::backdrop {
-      background-color: rgba(0, 0, 0, 0.5);
-      backdrop-filter: blur(2px);
-    }
