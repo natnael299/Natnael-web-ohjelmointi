@@ -5,6 +5,7 @@ form.addEventListener("submit", (e) => {
     e.preventDefault();
     const data = new FormData(form);
     comments.push({
+      id: crypto.randomUUID(),
       date: data.get("date"),
       email: data.get("email"),
       type: data.get("type"),
