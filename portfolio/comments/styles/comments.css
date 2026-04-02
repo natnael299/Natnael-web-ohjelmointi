@@ -17,6 +17,7 @@
       margin: 0 auto;
       display: grid;
       gap: 12px;
+      padding-bottom: 70px;
     }
 
     .comment {
@@ -32,10 +33,35 @@
       line-height: 1.5;
     }
 
-    nav {
+
+    dialog {
+      margin: auto;
+    }
+
+    dialog::backdrop {
+      background-color: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(2px);
+    }
+
+    footer {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 10px;
-      margin-top: 15px;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      background-color: lightcoral;
+      color: #fff;
+    }
+
+    footer a {
+      border: none;
+      padding: 0;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+      box-shadow: none;
     }
