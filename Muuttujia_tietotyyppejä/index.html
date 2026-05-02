@@ -1,29 +1,31 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <h3>Muuttujia ja tietotyyppejä</h3>
+      <input type="text" class="num1" placeholder="kirjoitta numero" />
+      <input type="text" class="num2" placeholder="kirjoitta numero" />
+      <select name="operation" id="operation">
+        <option value="">Valita Laskinta Operation</option>
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+      </select>
 
-  <div class="container">
-    <h3>Muuttujia ja tietotyyppejä</h3>
-    <input type="text" class="num1" placeholder="kirjoitta numero">
-    <input type="text" class="num2" placeholder="kirjoitta numero">
-    <select name="operation" id="operation">
-      <option value="">Valita Laskinta Operation</option>
-      <option value="+">+</option>
-      <option value="-">-</option>
-      <option value="*">*</option>
-      <option value="/">/</option>
-    </select>
+      <div class="dateContainer"></div>
 
-    <div class="answerBox"></div>
-    <button class="operationBtn">Saada Vastaus</button>
-  </div>
-  
-  <script src="./script.js"></script>
-</body>
+      <div class="answerBox"></div>
+      <button class="operationBtn">Saada Vastaus</button>
+      <button class="dateBtn">Katso Päivää Määrä</button>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
 </html>
