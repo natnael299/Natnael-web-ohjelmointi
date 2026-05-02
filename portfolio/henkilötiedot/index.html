@@ -19,6 +19,18 @@
       </thead>
       <tbody class="tableBody"></tbody>
     </table>
+
+    <form method="GET" action="./index.html" class="form">
+      <input type="text" name="name" placeholder="syötä nimi" required />
+      <input type="number" name="age" placeholder="syötä ikä" required />
+      <input type="text" name="job" placeholder="syötä työ" required />
+      <select name="license" required>
+        <option value="">Onko Ajokortti vai ei</option>
+        <option value="Kyllä">Kyllä</option>
+        <option value="Ei">Ei</option>
+      </select>
+      <button type="submit" class="addBtn">Add</button>
+    </form>
     <script src="./script.js"></script>
   </body>
 </html>

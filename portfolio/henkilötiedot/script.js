@@ -40,11 +40,25 @@ function luoRivit() {
     html += `
           <tr>
             <td>${t.name}</td>
-            <td>${t.age}</td>
-            <td>${t.job}</td>
+            <td>${t.age > 18 ? `${t.age}🍺` : t.age}</td>
+            <td>${t.job.toLowerCase() == "opiskelija" ? `${t.job}🎓` : t.job}</td>
             <td>${t.driversLicense ? "Kyllä" : "Ei"}</td>
             </tr>
             `;
   });
   tableBody.innerHTML = html;
 }
+
+const formEle = document.querySelector(".form");
+const AddInfo = (e) => {
+  e.preventDefault();
+  const data = new FormData(e.currentTarget);
+  tiedot.push({
+    name: data.get("name").trim(),
+    age: data.get("age").trim(),
+    job: data.get("job").trim(),
+    driversLicense: data.get("license"),
+  });
+  luoRivit();
+};
+formEle.addEventListener("submit", AddInfo);
