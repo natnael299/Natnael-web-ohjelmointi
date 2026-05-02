@@ -4,94 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./animaatiot.css">
   <title>Document</title>
-
-  <style>
-    .loaderes {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      border: 1px solid black;
-      width: fit-content;
-      padding: 10px;
-      border-radius: 10px;
-      margin-top: 30px;
-    }
-
-    .rotate {
-      border: 16px grey solid;
-      border-top: 16px rgb(41, 73, 177) solid;
-      height: 38px;
-      width: 38px;
-      border-radius: 50%;
-      animation: spin 1s linear infinite;
-      margin-bottom: 15px;
-    }
-
-    .imgC {
-      border-left: 3px solid black;
-      padding-left: 20px;
-    }
-
-    .imgC img {
-      height: 45px;
-      animation: spin 1.2s linear infinite;
-    }
-
-    .leftRight {
-      display: flex;
-      border: 1px solid black;
-      height: fit-content;
-      width: fit-content;
-      margin-top: 40px;
-    }
-
-    .leftRight div {
-      border: 1px solid black;
-      height: 15px;
-      width: 15px;
-    }
-
-    .orange {
-      background-color: orange;
-    }
-
-    .circle {
-      height: 50px;
-      width: 50px;
-      margin-top: 40px;
-      border-radius: 50%;
-      background-color: orangered;
-      animation: pulse 1.25s infinite;
-      margin: 20px;
-    }
-
-    @keyframes spin {
-      0% {
-        transform: rotate(0deg);
-      }
-
-      100% {
-        transform: rotate(360deg);
-      }
-    }
-
-    @keyframes pulse {
-      0% {
-        box-shadow: 0 0 0 0 orangered;
-      }
-
-      100% {
-        box-shadow: 0 0 0 17px #fff;
-      }
-    }
-  </style>
 </head>
 
-<body onload="myFunction()">
+<body>
+  <h1>Loaders</h1>
   <div class="loaderes">
     <div class="rotate">
-
     </div>
     <div class="imgC">
       <img src="spinner.png" alt="loading" id="loadImg">
@@ -123,27 +43,7 @@
 
     <div class="circle"></div>
   </div>
-  <script>
-    let tOut;
-    function myFunction() {
-      tOut = setTimeout(() => {
-        document.getElementById("myDiv").style.display = "block";
-        document.getElementById("loadImg").style.display = "none";
-      }, 3000);
-    }
-
-    const box = Array.from(document.querySelector(".leftRight").children);
-    const len = box.length;
-    let index = 0;
-    function turnOrange() {
-      box.forEach(b => b.classList.remove("orange"));
-      box[index].classList.add("orange");
-      index = (index + 1) % len;
-    }
-
-    //executes the function every time interval
-    setInterval(turnOrange, 500);
-  </script>
+<script src="./animaatiot.js"></script>
 </body>
 
 </html>
