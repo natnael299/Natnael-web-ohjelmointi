@@ -81,3 +81,37 @@ function Laske() {
     answerBox.textContent = `Vastaus on: ${answer}`;
   }
 }
+
+const appendSet = (set, ele) => {
+  set.forEach((i) => {
+    ele.innerHTML += `<li> ${i}</li>`;
+  });
+};
+
+//JS Setit
+const Veijo = new Set(["luku", "poisto"]);
+const Elvira = new Set(["luku", "kirjoitus", "muokkaus"]);
+const Mehdi = new Set(["luku", "muokkaus", "poisto"]);
+const Tuuli = new Set(["kirjoitus", "poisto"]);
+
+const veijoL = document.querySelector(".veijoL");
+const elviraL = document.querySelector(".elviraL");
+const mehdiL = document.querySelector(".mehdiL");
+const tuuliL = document.querySelector(".tuuliL");
+
+appendSet(Veijo, veijoL);
+appendSet(Elvira, elviraL);
+appendSet(Mehdi, mehdiL);
+appendSet(Tuuli, tuuliL);
+
+const veijotuuli = document.querySelector(".veijotuuli");
+const mehdielvira = document.querySelector(".mehdielvira");
+const elviratuuli = document.querySelector(".elviratuuli");
+
+const Veijotuuli = Veijo.union(Tuuli);
+const Mehdielvira = Veijotuuli.intersection(Tuuli);
+const Elviratuuli = Veijotuuli.symmetricDifference(Tuuli);
+
+appendSet(Veijotuuli, veijotuuli);
+appendSet(Mehdielvira, mehdielvira);
+appendSet(Elviratuuli, elviratuuli);
