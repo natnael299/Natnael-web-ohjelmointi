@@ -51,7 +51,7 @@ const send = (e) => {
   const usage = form.get("agree");
   const body = form.get("text");
 
-  [form, birthday, email, type, usage, body].forEach((d) => console.log(d));
+  console.log(form, birthday, email, type, usage, body);
   document.querySelector(".dialog_form").close();
 };
 
