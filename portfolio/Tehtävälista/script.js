@@ -1,5 +1,6 @@
 const lista = ["Tehtävä 1", "Tehtävä2"];
 const textC = document.querySelector(".text");
+const numC = document.querySelector(".num");
 display_Items();
 function display_Items() {
   let html = "";
@@ -11,9 +12,10 @@ function display_Items() {
 
 function addItems() {
   if (textC) {
-    lista.push(textC.value);
-    display_Items();
+    for (i = 0; i < numC.value; i++) {
+      lista.push(textC.value);
+      display_Items();
+    }
   }
 }
-
 document.querySelector(".addBtn").addEventListener("click", addItems);
