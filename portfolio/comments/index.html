@@ -1,36 +1,66 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Comment form page for sending messages and feedback."
+    />
+    <meta name="author" content="Natnael Beyene" />
+    <meta name="keywords" content="Natnael, comments, form, feedback" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/main.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Comment form page for sending messages and feedback.">
-  <meta name="author" content="Natnael Beyene">
-  <meta name="keywords" content="Natnael, comments, form, feedback">
-  <title>Document</title>
-  <link rel="stylesheet" href="./styles/main.css">
+  <body>
+    <form method="GET" action="./index.html" class="form">
+      <input type="date" name="date" required />
+      <input
+        type="email"
+        name="email"
+        placeholder="example@fake.com"
+        required
+      />
+      <select name="type" class="type" required>
+        <option value="">--valitse tyyppi--</option>
+      </select>
+      <textarea name="text" required></textarea>
+      <div class="check">
+        <input type="checkbox" name="agree" id="check" />
+        <p>Suostuun kaikkieen säntöjeen</p>
+      </div>
+      <input type="submit" value="lähettää" />
+      <a href="comments.html" style="margin: 0 auto">Tatkastelee commentoja</a>
+      <p id="error"></p>
+    </form>
 
-</head>
-
-<body>
-  <form method="GET" action="./index.html" class="form">
-    <input type="date" name="date" required>
-    <input type="email" name="email" placeholder="example@fake.com" required>
-    <select name="type" class="type" required>
-      <option value="">--valitse tyyppi--</option>
-    </select>
-    <textarea name="text" required></textarea>
-    <div class="check">
-      <input type="checkbox" name="agree" id="check">
-      <p>Suostuun kaikkieen säntöjeen</p>
-    </div>
-    <input type="submit" value="lähettää">
-    <a href="comments.html" style="margin: 0 auto;
-    ">Tatkastelee commentoja</a>
-    <p id="error"></p>
-  </form>
-
-  <script type="module" src="./script/index.js"></script>
-</body>
-
+    <button command="show-modal" commandfor="my-dialog">Open Dialog</button>
+    <dialog id="my-dialog">
+      <button command="close" commandfor="my-dialog">X</button>
+      <form method="GET" action="./index.html" class="dialog_form">
+        <input type="date" name="date" required />
+        <input
+          type="email"
+          name="email"
+          placeholder="example@fake.com"
+          required
+        />
+        <select name="type" class="type" required>
+          <option value="">--valitse tyyppi--</option>
+        </select>
+        <textarea name="text" required></textarea>
+        <div class="check">
+          <input type="checkbox" name="agree" id="check" />
+          <p>Suostuun kaikkieen säntöjeen</p>
+        </div>
+        <input type="submit" value="Send" />
+        <a href="comments.html" style="margin: 0 auto"
+          >Tatkastelee commentoja</a
+        >
+        <p id="error"></p>
+      </form>
+    </dialog>
+    <script type="module" src="./script/index.js"></script>
+  </body>
 </html>

@@ -14,28 +14,45 @@ form.addEventListener("submit", (e) => {
     getComments();
     window.location.href = "./comments.html";
   } else {
-    document.getElementById("error").textContent = "Virhee!! kokeilee uudestaan";
+    document.getElementById("error").textContent =
+      "Virhee!! kokeilee uudestaan";
   }
-})
-const type = document.querySelector(".type");
-const viestiType =
-  [{
+});
+const type = document.querySelectorAll(".type");
+const viestiType = [
+  {
     id: 1,
-    name: "kysymys"
+    name: "kysymys",
   },
   {
     id: 2,
-    name: "kommenti"
+    name: "kommenti",
   },
   {
     id: 3,
-    name: "vinkki"
+    name: "vinkki",
   },
-  ]
+];
+
+let optionHtml = "";
 viestiType.forEach((v) => {
   //create option element for the text type
-  const option = document.createElement("option");
-  option.value = v.id;
-  option.textContent = v.name;
-  type.appendChild(option);
+  optionHtml += `<option value='${v.id}'>${v.name}</option>`;
 });
+type.forEach((t) => (t.innerHTML += optionHtml));
+
+//dialog functionalities
+const send = (e) => {
+  e.preventDefault();
+  const form = new FormData(e.currentTarget);
+  const birthday = form.get("date");
+  const email = form.get("email");
+  const type = form.get("type");
+  const usage = form.get("agree");
+  const body = form.get("text");
+
+  [form, birthday, email, type, usage, body].forEach((d) => console.log(d));
+  document.querySelector(".dialog_form").close();
+};
+
+document.querySelector(".dialog_form").addEventListener("submit", send);
